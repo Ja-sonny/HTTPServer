@@ -78,10 +78,6 @@ def DELETE(connection, fPath, ctype, clength):
     response = 'HTTP/1.1 {}\r\nContent-type: {} \r\nbody: {}\r\n\r\n'.format(response_message, ctype, clength)
     connection.sendall(response.encode())
 
-def Cats(rt):
-
-
-
 def server():
     serversocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     serversocket.bind(('localhost', 8888))
